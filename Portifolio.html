@@ -1,86 +1,191 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevLinks</title>
+    <title>Portfólio | Gabriel Raupp Pimentel</title>
+
+    <meta
+      name="description"
+      content="Portfólio pessoal de Gabriel Raupp Pimentel com links, projetos e formas de contato."
+    />
+    <meta name="author" content="Gabriel Raupp Pimentel" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="container">
-      <div id="portifolio">
+      <header id="profile">
+        <button
+          id="switch"
+          type="button"
+          aria-label="Alternar tema claro/escuro"
+          aria-pressed="false"
+          onclick="toggleMode()"
+        >
+          <span class="switch-track"></span>
+          <span class="switch-thumb"></span>
+        </button>
+
         <img
+          id="avatar"
           src="./assets/avatar.jpeg"
-          class="rounded-circle"
-          alt="Foto de Gabriel Raupp Pimentel Sorrindo"
-          width="100pt"
+          class="avatar"
+          alt="Foto de perfil de Gabriel Raupp Pimentel"
+          width="112"
+          height="112"
         />
-        <p>@GabiRaupp17</p>
-      </div>
 
-      <div id="switch" onclick="toggleMode()">
-        <button></button>
-        <span></span>
-      </div>
+        <h1>Gabriel Raupp Pimentel</h1>
+        <p class="tagline">Portfólio pessoal &amp; links principais</p>
+      </header>
 
-      <ul>
-        <li>
-          <a href="https://www.instagram.com/gabriel.raupp17/"
-            >Me Siga no Instagram</a
-          >
-        </li>
+      <main>
+        <section id="links-section" aria-label="Links principais">
+          <ul class="links-list">
+            <li>
+              <a
+                href="https://www.instagram.com/gabriel.raupp17/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Me siga no Instagram
+              </a>
+            </li>
 
-        <li>
-          <a
-            href="https://api.whatsapp.com/send?phone=554899795671"
-            alt="Numero Do Whats"
-            >Fale Comigo</a
-          >
-        </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send?phone=554899795671"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fale comigo no WhatsApp
+              </a>
+            </li>
 
-        <li>
-          <a href="https://github.com/GabrielRaupp">Ver meu portfólio</a>
-        </li>
+            <li>
+              <a
+                href="https://github.com/GabrielRaupp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver meu GitHub / portfólio técnico
+              </a>
+            </li>
 
-        <li>
-          <a
-            href="https://www.linkedin.com/in/gabriel-rp-undefined-5800b6262/"
-            target="_blank"
-            >Ver meu Linkedin</a
-          >
-        </li>
-      </ul>
-      <div id="social-links">
-        <a href="https://github.com/GabrielRaupp" target="_blank">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/gabriel-rp-undefined-5800b6262/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver meu LinkedIn
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section id="about">
+          <h2>Sobre mim</h2>
+          <p>
+            Aqui você pode escrever um resumo curto sobre quem você é, o que faz
+            e o que está buscando.
+            <br />
+            Exemplo: “Sou [sua área: ex. desenvolvedor web, estudante de
+            tecnologia, etc.], gosto de criar soluções simples e objetivas, e
+            estou em busca de oportunidades para crescer profissionalmente.”
+          </p>
+        </section>
+
+        <section id="projects">
+          <h2>Projetos em destaque</h2>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>Projeto 1</h3>
+              <p>
+                Descreva um projeto legal que você fez. Fale em 1–2 frases o
+                problema que ele resolve e as tecnologias usadas.
+              </p>
+              <a
+                href="https://github.com/GabrielRaupp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver no GitHub
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h3>Projeto 2</h3>
+              <p>
+                Mais um projeto que você quer destacar. Pode ser estudo,
+                freelancer, algo da faculdade/curso etc.
+              </p>
+              <a
+                href="https://github.com/GabrielRaupp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver no GitHub
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Contato</h2>
+          <p>
+            Para parcerias, oportunidades ou dúvidas, você pode falar comigo
+            pelo WhatsApp ou LinkedIn. Se quiser, coloque também seu e-mail
+            aqui.
+          </p>
+        </section>
+      </main>
+
+      <div id="social-links" aria-label="Redes sociais">
+        <a
+          href="https://github.com/GabrielRaupp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
           <ion-icon name="logo-github"></ion-icon>
         </a>
 
-        <a href="https://www.instagram.com/gabriel.raupp17/" target="_blank">
+        <a
+          href="https://www.instagram.com/raupp.20/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
           <ion-icon name="logo-instagram"></ion-icon>
         </a>
 
         <a
-          href="https://www.linkedin.com/in/gabriel-rp-undefined-5800b6262/"
+          href="https://www.linkedin.com/in/gabriel-raupp-pimentel-77990238b/"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
         >
           <ion-icon name="logo-linkedin"></ion-icon>
         </a>
       </div>
 
-      <footer></footer>
+      <footer>
+        <small>
+          &copy; <span id="year"></span> Gabriel Raupp Pimentel. Todos os
+          direitos reservados.
+        </small>
+      </footer>
     </div>
 
     <script
